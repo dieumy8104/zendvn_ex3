@@ -1,0 +1,240 @@
+/* exercise4 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .slide-container {
+    display: flex;
+    position: relative;
+    height: 400px;
+    border: 2px solid #ebe9f9;
+    padding: 15px;
+    min-width: 500px;
+  }
+  
+  .slide-container .slides {
+    position: relative;
+    border: 2px solid #ebe9f9;
+    border-right: 0px;
+    overflow: hidden;
+  }
+  
+  .slide-container .slides img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .slide-container .slides img:not(.active) {
+    top: 0;
+    left: -100%;
+  }
+  
+  .buttons .next,
+  .buttons .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+    color: orangered;
+    border: 2px solid white;
+    padding: 0 12px;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  
+  .buttons .next {
+    right: 20px;
+  }
+  
+  .buttons .prev {
+    left: 20px;
+  }
+  
+  .dotsContainer {
+    z-index: 3;
+    border: 2px solid #ebe9f9;
+    border-left: 0px;
+  }
+  
+  .dotsContainer .dot {
+    padding: 9px;
+    height: 73px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #ebe9f9;
+    transition: background-color 0.6s ease;
+    overflow: hidden;
+  }
+  
+  .dotsContainer .dot:last-child {
+    border-bottom: 0px;
+  }
+  
+  .dotsContainer .active {
+    background-color: #e5e5e5;
+  }
+  
+  @keyframes next1 {
+    from {
+      left: 0%;
+    }
+  
+    to {
+      left: -100%;
+    }
+  }
+  
+  @keyframes next2 {
+    from {
+      left: 100%;
+    }
+  
+    to {
+      left: 0%;
+    }
+  }
+  
+  @keyframes prev1 {
+    from {
+      left: 0%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes prev2 {
+    from {
+      left: -100%;
+    }
+  
+    to {
+      left: 0%;
+    }
+  }
+  
+  .carousel-button {
+    border: none;
+    color: white;
+    background-color: green;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 22px;
+  }
+  
+  .carousel-opacity .carousel-content{
+    background-color: #00000078;
+    text-align: left;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    animation: slide 15s infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+  
+    5% {
+      transform: translateX(0);
+    }
+  
+    10% {
+      transform: translateX(0);
+    }
+  
+    15% {
+      transform: translateX(0);
+    }
+  
+    20% {
+      transform: translateX(0);
+    }
+  
+    25% {
+      transform: translateX(-100%);
+    }
+  
+    30% {
+      transform: translateX(-100%);
+    }
+  
+    35% {
+      transform: translateX(-100%);
+    }
+  
+    40% {
+      transform: translateX(-100%);
+    }
+  
+    45% {
+      transform: translateX(-200%);
+    }
+  
+    50% {
+      transform: translateX(-200%);
+    }
+  
+    55% {
+      transform: translateX(-200%);
+    }
+  
+    60% {
+      transform: translateX(-200%);
+    }
+  
+    65% {
+      transform: translateX(-300%);
+    }
+  
+    70% {
+      transform: translateX(-300%);
+    }
+  
+    75% {
+      transform: translateX(-300%);
+    }
+  
+    80% {
+      transform: translateX(-300%);
+    }
+  
+    85% {
+      transform: translateX(-400%);
+    }
+  
+    90% {
+      transform: translateX(-400%);
+    }
+  
+    95% {
+      transform: translateX(-400%);
+    }
+  
+    100% {
+      transform: translateX(-400%);
+    }
+  }
+  
+  .carousel-content p {
+    margin: 0;
+  }
+  
+  .carousel-opacity {
+    bottom: 0;
+    display: flex;
+    position: absolute;
+  }  
+/* end exercise4 */
